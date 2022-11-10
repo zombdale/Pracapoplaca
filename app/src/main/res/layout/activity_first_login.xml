@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+    <include
+        layout="@layout/toolbar_main"
+        android:id="@+id/toolbar"
+        />
+
+    <ImageView
+        android:id="@+id/create_account_intro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_weight="1"
+        android:onClick="goto_create_account_intro"
+        android:src="@android:drawable/ic_input_add"
+        android:contentDescription="@string/create_account_intro"/>
+    <ImageView
+        android:id="@+id/login_account_intro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_weight="1"
+        android:onClick="goto_login_account_intro"
+        android:src="@android:drawable/ic_lock_idle_charging"
+        android:contentDescription="@string/login_account_intro"/>
+    <ImageView
+        android:id="@+id/guest_create_intro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_weight="1"
+        android:onClick="goto_guest_create_intro"
+        android:src="@android:drawable/ic_menu_my_calendar"
+        android:contentDescription="@string/guest_create_intro"/>
+</LinearLayout>

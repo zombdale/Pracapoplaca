@@ -1,0 +1,2 @@
+include ':app', 'jdbc'
+rootProject.name='Praca poplaca'

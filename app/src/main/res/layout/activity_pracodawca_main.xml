@@ -1,0 +1,468 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Pracodawca_main">
+    <include
+        layout="@layout/toolbar_empr_offerts"
+        android:id="@+id/toolbar_employer_offerts"
+        />
+
+
+    <HorizontalScrollView
+        android:id="@+id/a1"
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:background="#144333"
+        android:fillViewport="false"
+        android:visibility="gone">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+        android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/b_employer_category_f"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/colorPrimaryDark"
+                android:focusedByDefault="false"
+                android:onClick="filtr_employer_category"
+                android:text="@string/b_employer_category_filtr"
+                android:textColor="@color/colorText" />
+
+            <Button
+                android:id="@+id/b_employer_city_f"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/colorPrimaryDark"
+                android:onClick="filtr_employer_city"
+                android:text="@string/b_employer_city_filtr"
+                android:textColor="@color/colorText" />
+
+            <Button
+                android:id="@+id/b_employer_date_f"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/colorPrimaryDark"
+                android:onClick="filtr_employer_date"
+                android:text="@string/b_employer_date_filtr"
+                android:textColor="@color/colorText" />
+
+            <Button
+                android:id="@+id/b_employer_hours_f"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/colorPrimaryDark"
+                android:onClick="filtr_employer_hours"
+                android:text="@string/b_employer_hours_filtr"
+                android:textColor="@color/colorText" />
+
+            <Button
+                android:id="@+id/b_employer_salary_f"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/colorPrimaryDark"
+                android:onClick="filtr_employer_salary"
+                android:text="@string/b_employer_salary_filtr"
+                android:textColor="@color/colorText" />
+
+        </LinearLayout>
+
+
+    </HorizontalScrollView>
+<!-- category   category   category   category   category   category   category   -->
+<LinearLayout
+    android:id="@+id/filtr_box_category"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:visibility="gone"
+    android:layout_marginTop="16dp"
+    android:layout_marginBottom="16dp"
+        >
+    <Spinner
+        android:id="@+id/filtr_box_category_spinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:entries="@array/category_list">
+<!--        szukac po tagach ? -->
+
+
+    </Spinner>
+    <GridLayout
+        android:columnCount="2"
+        android:rowCount="1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <Button
+        android:id="@+id/b_apply_filtr_box_category"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="filtr_apply_category"
+        android:text="@string/apply_filtr"
+        />
+    <Button
+        android:id="@+id/b_cancel_filtr_box_category"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="filtr_cancel_category"
+        android:text="@string/cancel_filtr"
+        />
+
+    </GridLayout>
+    </LinearLayout>
+<!--  city  city  city  city  city  city  city  city  city  city  -->
+    <LinearLayout
+        android:id="@+id/filtr_box_city"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone"
+        >
+
+        <AutoCompleteTextView
+            android:id="@+id/filtr_box_city_auto_complete"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/acc_create_city"
+            />
+        <GridLayout
+            android:columnCount="2"
+            android:rowCount="1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        <Button
+            android:id="@+id/b_apply_filtr_box_city"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="filtr_apply_city"
+            android:text="@string/apply_filtr"
+            />
+        <Button
+            android:id="@+id/b_cancel_filtr_box_city"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="filtr_cancel_city"
+            android:text="@string/cancel_filtr"
+            />
+        </GridLayout>
+    </LinearLayout>
+<!--  date  date  date  date  date  date  date  date  date  date  date  date  -->
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:id="@+id/filtr_box_date"
+        android:visibility="gone">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+    <LinearLayout
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+      >
+        <RadioGroup
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <RadioButton
+                android:id="@+id/filtr_box_date_fromto"
+                android:text="@string/fromto_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="filtr_radio_date_fromto"
+                android:checked="true"/>
+            <RadioButton
+                android:id="@+id/filtr_box_date_at"
+                android:text="@string/date_at"
+                android:onClick="filtr_radio_date_at"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </RadioGroup>
+        <LinearLayout
+                android:visibility="gone"
+                android:id="@+id/filtr_box_date_linbox_at"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+        <DatePicker
+            android:tooltipText="@string/data_at_day"
+            android:id="@+id/filtr_box_date_picker_at"
+            android:datePickerMode="spinner"
+            android:layout_width="wrap_content"
+            android:calendarViewShown="false"
+            android:layout_height="wrap_content"/>
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/filtr_box_date_linbox_fromto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <DatePicker
+                android:tooltipText="@string/date_from"
+                android:id="@+id/filtr_box_date_picker_from"
+                android:datePickerMode="spinner"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:calendarViewShown="false"/>
+
+            <DatePicker
+                android:tooltipText="@string/date_to"
+                android:datePickerMode="spinner"
+                android:id="@+id/filtr_box_date_picker_to"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:calendarViewShown="false"/>
+        </LinearLayout>
+        <GridLayout
+            android:columnCount="2"
+            android:rowCount="1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        <Button
+            android:id="@+id/b_apply_filtr_box_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="filtr_apply_date"
+            android:text="@string/apply_filtr"
+            />
+        <Button
+            android:id="@+id/b_cancel_filtr_box_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="filtr_cancel_date"
+            android:text="@string/cancel_filtr"
+            />
+        </GridLayout>
+    </LinearLayout> </ScrollView> </LinearLayout>
+<!--    hours  hours  hours  hours  hours  hours  hours  -->
+    <LinearLayout
+        android:id="@+id/filtr_box_hours"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+
+        <EditText
+            android:id="@+id/filtr_box_hours_set"
+            android:layout_width="wrap_content"
+            android:inputType="number"
+            android:hint="@string/ammount"
+            android:layout_height="wrap_content"/>
+        <RadioGroup
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <RadioButton
+                android:id="@+id/filtr_box_hours_often"
+                android:text="@string/filtr_box_hours_often_radiob"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="filtr_radio_hours_often"
+                android:checked="true"/>
+            <RadioButton
+                android:id="@+id/filtr_box_hours_once"
+                android:text="@string/filtr_box_hours_once_radiob"
+                android:onClick="filtr_radio_hours_once"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="false"/>
+        </RadioGroup>
+        <LinearLayout
+            android:id="@+id/filtr_box_hours_for_often"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="visible"
+            >
+        <Spinner
+            android:id="@+id/filtr_box_hours_set_spinner"
+            android:layout_width="wrap_content"
+            android:entries="@array/filtr_box_hours_spinner"
+            android:layout_height="wrap_content"
+            />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/filtr_box_hours_for_ammount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            >
+            <Spinner
+                android:id="@+id/filtr_box_hours_for_ammount_spinner"
+                android:layout_width="wrap_content"
+                android:entries="@array/filtr_box_hours_spinner"
+                android:layout_height="wrap_content"
+                />
+        </LinearLayout>
+        <GridLayout
+            android:columnCount="2"
+            android:rowCount="1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        <Button
+            android:id="@+id/b_apply_filtr_box_hours"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="filtr_apply_hours"
+            android:text="@string/apply_filtr"
+            />
+        <Button
+            android:id="@+id/b_cancel_filtr_box_hours"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="filtr_cancel_hours"
+            android:text="@string/cancel_filtr"
+            />
+        </GridLayout>
+    </LinearLayout>
+<!--    SALARY  SALARY  SALARY  SALARY  SALARY  SALARY  SALARY  SALARY  SALARY  SALARY  -->
+    <LinearLayout
+        android:id="@+id/filtr_box_salary"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone">
+        <EditText
+            android:id="@+id/filtr_box_salary_set"
+            android:layout_width="wrap_content"
+            android:inputType="number"
+            android:hint="@string/salary_filtr_set_field"
+            android:layout_height="wrap_content"/>
+        <RadioGroup
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <RadioButton
+                android:id="@+id/filtr_box_salary_radio_less"
+                android:text="@string/less"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"/>
+            <RadioButton
+                android:id="@+id/filtr_box_salary_radio_more"
+                android:text="@string/more"
+                android:checked="false"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </RadioGroup>
+        <Button
+            android:id="@+id/b_apply_filtr_box_salary"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="filtr_apply_salary"
+            android:text="@string/apply_filtr"
+            />
+        <Button
+            android:id="@+id/b_cancel_filtr_box_salary"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="filtr_cancel_salary"
+            android:text="@string/cancel_filtr"
+            />
+    </LinearLayout>
+
+
+
+<!--  OFFERTS OFFERTS OFFERTS OFFERTS OFFERTS OFFERTS OFFERTS -->
+
+       <!-- <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/employer_offerts_list"
+            android:orientation="vertical">
+            <fragment
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/employer_offert_fragment"
+                class="pl.kalisz.pwsz.zi.marcin.majzner.pracapoplaca.EmployerOffert.EmployerOffertListFragment"/>
+
+        </LinearLayout>-->
+    <TextView
+        android:id="@+id/message_of_offerts"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/RV_EMPRO"
+            android:scrollbars="vertical"
+            android:layout_gravity="center"
+            tools:layout_editor_absoluteX="8dp"
+            tools:layout_editor_absoluteY="8dp"
+            >
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+</LinearLayout>
+
+    <!--tools:context=".EmployerOffert.EmployerOffertList"-->
+
+    <!--
+
+    <include
+    layout="@layout/toolbar_with_search"
+    android:id="@+id/toolbar"
+        />
+    <TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:textSize="25dp"
+    android:hint="@string/login_welcome_message"/>
+    <Button
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="dasdas" />
+
+    <Button
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="dasdas" />
+
+    <HorizontalScrollView
+    android:id="@+id/a1"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="#144333"
+
+        >
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+
+        android:background="?android:attr/listDivider">
+
+        <Button
+            android:width="100dp"
+            android:height="100dp"
+            android:text="edfqfeqw"
+
+            />
+    </View>
+
+
+    </HorizontalScrollView>
+
+
+    <ScrollView
+    android:id="@+id/a2"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+    </ScrollView>
+
+        </LinearLayout>-->

@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="pl.kalisz.pwsz.zi.marcin.majzner.pracapoplaca">
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/cash1"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:ignore="GoogleAppIndexingWarning">
+        <activity android:name=".EmployerOffert.EmployerOffertEdit"></activity>
+        <activity android:name=".EmployeeOffert.EmployeeOffertEdit" />
+        <activity
+            android:name=".dbtester_full"
+            android:label="dbtester"
+            android:parentActivityName=".account"
+            android:theme="@style/MyAppTheme" />
+        <activity
+            android:name=".account_settings"
+            android:label="@string/account_settings_title"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/MyAppTheme" />
+        <activity
+            android:name=".account_login"
+            android:label="@string/account_login_title"
+            android:parentActivityName=".account"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".account_create"
+            android:label="@string/account_create_title"
+            android:parentActivityName=".account"
+            android:theme="@style/AppTheme" />
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".account"
+            android:label="@string/account_main_title"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".Pracownik_main"
+            android:label="@string/pracownik_main_title"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".Pracodawca_main"
+            android:label="@string/pracodawca_main_title"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".search"
+            android:label="@string/search_offert"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/MyAppTheme" />
+        <activity
+            android:name=".main_settings"
+            android:label="@string/main_settings_title"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/MyAppTheme" />
+        <activity
+            android:name=".Employer_offert_make"
+            android:label="@string/employer_offert_create_title"
+            android:parentActivityName=".account"
+            android:theme="@style/MyAppTheme" />
+        <activity
+            android:name=".EmployerOffert.EmployerOffert"
+            android:label="@string/employer_offert_title"
+            android:parentActivityName=".Pracodawca_main"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".Employee_offert_make"
+            android:label="@string/employee_offert_create_title"
+            android:parentActivityName=".account"
+            android:theme="@style/MyAppTheme" />
+        <activity
+            android:name=".EmployeeOffert.EmployeeOffert"
+            android:label="@string/employee_offert_title"
+            android:parentActivityName=".Pracownik_main"
+            android:theme="@style/AppTheme" />
+    </application>
+
+</manifest>

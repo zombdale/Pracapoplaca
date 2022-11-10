@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Employee_offert_make"
+    >
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        android:text="@string/employee_offert_create_title"
+        />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/EMPRM_nazwa_hint"/>
+                <EditText
+                    android:id="@+id/EMPE_OF_M_nazwa"
+                    android:hint="@string/EMPRM_nazwa_hint"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/b_employer_category_filtr"/>
+                <Spinner
+                    android:id="@+id/EMPE_OF_M_cat"
+                    android:tooltipText="@string/EMPRM_l_cat"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:entries="@array/category_list"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="20dp"
+                android:scrollbars="vertical"
+                android:scrollbarAlwaysDrawVerticalTrack="true"
+                android:scrollbarAlwaysDrawHorizontalTrack="true">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="@string/EMPEE_skills" />
+                <Button
+                    android:id="@+id/EMPEE_OFFERT_MAKE_ADD_TAG_BUTTON"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="EMPEE_OFFERT_MAKE_SKILLS_ADD"
+                    android:text="@string/EMPEE_Add_TAG" />
+                <ListView
+                    android:id="@+id/EMPEE_OFFERT_MAKE_list_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:choiceMode="singleChoice"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:scrollingCache="true"
+                    android:smoothScrollbar="true"
+                    android:stretchMode="columnWidth"
+                    />
+
+
+            </LinearLayout>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="@string/EMPEE_OFFERT_MAKE_Dane" />
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scrollbarSize="10dp"
+                android:scrollbarAlwaysDrawHorizontalTrack="true"
+                android:scrollbarAlwaysDrawVerticalTrack="true">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginHorizontal="20dp"
+                    android:layout_marginVertical="20dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/EMPE_phone_hint"/>
+                <EditText
+                    android:id="@+id/EMPE_OF_M_phone"
+                    android:hint="@string/acc_create_phone_hint"
+                    android:layout_width="match_parent"
+                    android:inputType="number"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/acc_create_email"/>
+                        <EditText
+                            android:id="@+id/EMPE_OF_M_email"
+                            android:hint="@string/acc_create_email_hint"
+                            android:layout_width="match_parent"
+                            android:inputType="textEmailAddress"
+                            android:layout_height="wrap_content"/>
+                    </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/acc_create_city"/>
+                <AutoCompleteTextView
+                    android:id="@+id/EMPE_OF_M_city"
+                    android:hint="@string/acc_create_city"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/post_code"/>
+                <EditText
+                    android:id="@+id/EMPE_OF_M_postcode"
+                    android:hint="@string/post_code_hint"
+                    android:inputType="number"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/l_employer_offert_payment"/>
+                <EditText
+                    android:hint="@string/EMPRM_salary_rep"
+                    android:id="@+id/EMPE_OF_M_salary_am"
+                    android:inputType="number"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    />
+            </LinearLayout>
+
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/EMPRM_desc"/>
+            <EditText
+                android:id="@+id/EMPE_OF_M_desc"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:hint="@string/EMPRM_desc"
+                android:inputType="text"/>
+
+        </LinearLayout>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/EMPEE_OFEERT_MAKE"
+                android:onClick="go_to_make"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                />
+        </LinearLayout>
+
+</ScrollView>
+
+</LinearLayout>

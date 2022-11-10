@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".dbtester_full"
+    android:orientation="vertical">
+
+    <EditText
+        android:id="@+id/db_name_field"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="name"/>
+
+    <EditText
+        android:id="@+id/db_pass_field"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="password"/>
+<Button
+    android:id="@+id/DB_check_login"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Check login"
+    android:onClick="DB_check_login"/>
+    <EditText
+        android:id="@+id/db_whatever_field"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="whatever"/>
+    <Button
+        android:id="@+id/DB_insert"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="insert"
+    android:onClick="DB_insert" />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/DB_update"
+        android:text="Update"
+        android:onClick="DB_update"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/db_id"
+        android:hint="id"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Delete"
+        android:id="@+id/DB_delete"
+        android:onClick="DB_Delete"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Check_counter"
+
+        android:onClick="DB_check_counter"/>
+
+
+
+</LinearLayout>

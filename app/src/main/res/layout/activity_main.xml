@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+    <include
+        layout="@layout/toolbar_main"
+        android:id="@+id/toolbar"
+        />
+
+    <TextView
+        android:id="@+id/activity_main_welcome_message"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"
+        />
+
+    <ImageView
+        android:id="@+id/pracownik_intro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_weight="1"
+        android:contentDescription="@string/main_pracownik_intro_button"
+        android:onClick="goto_pracownik_main"
+        android:src="@drawable/ic_epmloyee_t" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/main_pracownik_intro_button_info"
+        android:layout_gravity="center"/>
+
+        <ImageView
+        android:id="@+id/pracodawca_intro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_weight="1"
+        android:onClick="goto_pracodawca_main"
+        android:src="@drawable/ic_employer_t"
+        android:contentDescription="@string/main_pracodawca_intro_button"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/main_pracodawca_intro_button_info"
+        android:layout_gravity="center"
+        android:layout_marginBottom="50dp"/>
+
+</LinearLayout>

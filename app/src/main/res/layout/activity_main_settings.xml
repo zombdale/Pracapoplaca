@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".main_settings">
+
+
+<TextView
+    android:id="@+id/settings_language_label"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="@string/settings_language_label" />
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <RadioButton
+            android:id="@+id/settings_radioButton_pol"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/Polish" />
+
+        <RadioButton
+            android:id="@+id/settings_radioButton_eng"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/English" />
+
+
+
+    </RadioGroup>
+
+    <EditText
+        android:id="@+id/font"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/font_size"/>
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/apply"
+        android:onClick="settings_language_change"/>
+</LinearLayout>

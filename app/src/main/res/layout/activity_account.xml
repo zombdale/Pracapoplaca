@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".account"
+    android:orientation="vertical">
+
+    <include
+       layout="@layout/toolbar_main"
+        android:id="@+id/toolbar_basic"/>
+
+
+
+        <TextView
+            android:id="@+id/account_welcome_message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/login_button"
+        android:visibility="gone"
+        android:text="@string/login"
+        android:onClick="goto_login"/>
+<!--    <Button
+        android:id="@+id/checkDBButton"
+        android:text="testDB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="goto_checkDB" />
+        -->
+<!--<Button
+    android:id="@+id/test_sql"
+    android:text="checkMySQL"
+    android:onClick="goto_just_check_db"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"/>-->
+
+    <LinearLayout
+        android:id="@+id/account_isguest_linear_box"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <RadioGroup
+            android:id="@+id/account_radio_group"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RadioButton
+                android:id="@+id/account_radio_data"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="false"
+                android:onClick="goto_radio_data"
+                android:text="@string/account_radio_data_txt" />
+
+            <RadioButton
+                android:id="@+id/account_radio_follow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="false"
+                android:onClick="goto_radio_follow"
+                android:text="@string/account_radio_follow_txt" />
+
+            <RadioButton
+                android:id="@+id/account_radio_offerts"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="false"
+                android:onClick="goto_radio_offerts"
+                android:text="@string/account_radio_offerts_txt" />
+
+
+        </RadioGroup>
+    </LinearLayout>
+<!--     dane konta-->
+    <LinearLayout
+        android:id="@+id/account_linear_box_data"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone">
+        <TextView
+            android:id="@+id/account_username"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:id="@+id/account_email"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+ <!--       <Button
+            android:id="@+id/account_data_edit_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/account_edit_data_button"
+            android:onClick="goto_edit"/>-->
+        <Button
+            android:id="@+id/account_data_logout_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/account_data_logout_button"
+            android:onClick="goto_logout"/>
+        <Button
+            android:id="@+id/account_data_edit_password_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/account_edit_password_data_button"
+            android:onClick="goto_edit_password"/>
+
+
+
+    </LinearLayout>
+
+<!-- obserwowane-->
+<LinearLayout
+    android:id="@+id/account_followed_box"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:visibility="gone"
+    >
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/account_followed_offerts_count"
+        android:visibility="gone"
+        />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/RV_USRF"
+            android:scrollbars="vertical"
+            android:layout_gravity="center"
+            tools:layout_editor_absoluteX="8dp"
+            tools:layout_editor_absoluteY="8dp"
+            >
+        </androidx.recyclerview.widget.RecyclerView>
+    </ScrollView>
+
+
+</LinearLayout>
+
+
+
+    <LinearLayout
+        android:id="@+id/account_linear_box_more"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone">
+        <Button
+            android:id="@+id/account_more_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            />
+        <TextView
+            android:id="@+id/account_offerts_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"/>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/RV_USRO"
+            android:scrollbars="vertical"
+            android:layout_gravity="center"
+            tools:layout_editor_absoluteX="8dp"
+            tools:layout_editor_absoluteY="8dp"
+            >
+        </androidx.recyclerview.widget.RecyclerView>
+    </ScrollView>
+
+<!--lista ofert konta -->
+
+    </LinearLayout>
+
+    </LinearLayout>

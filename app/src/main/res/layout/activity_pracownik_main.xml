@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Pracownik_main"
+   >
+    <include
+        layout="@layout/toolbar_empee_offerts"
+        android:id="@+id/toolbar_employee_offerts"
+        />
+    <HorizontalScrollView
+        android:id="@+id/a1"
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:background="#144333"
+        android:fillViewport="false"
+        android:visibility="gone">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:orientation="horizontal">
+            <Button
+                android:id="@+id/b_employee_category_f"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/colorPrimaryDark"
+                android:focusedByDefault="false"
+                android:onClick="filtr_employee_category"
+                android:text="@string/b_employer_category_filtr"
+                android:textColor="@color/colorText" />
+            <Button
+                android:id="@+id/b_employee_city_f"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/colorPrimaryDark"
+                android:onClick="filtr_employee_city"
+                android:text="@string/b_employer_city_filtr"
+                android:textColor="@color/colorText" />
+        </LinearLayout>
+    </HorizontalScrollView>
+    <!-- category   category   category   category   category   category   category   -->
+    <LinearLayout
+        android:id="@+id/filtr_box_category"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        >
+        <Spinner
+            android:id="@+id/filtr_box_category_spinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:entries="@array/category_list">
+            <!--        szukac po tagach ? -->
+
+
+        </Spinner>
+        <GridLayout
+            android:columnCount="2"
+            android:rowCount="1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <Button
+                android:id="@+id/b_apply_filtr_box_category"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="filtr_apply_category"
+                android:text="@string/apply_filtr"
+                />
+            <Button
+                android:id="@+id/b_cancel_filtr_box_category"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="filtr_cancel_category"
+                android:text="@string/cancel_filtr"
+                />
+
+        </GridLayout>
+    </LinearLayout>
+    <!--  city  city  city  city  city  city  city  city  city  city  -->
+    <LinearLayout
+        android:id="@+id/filtr_box_city"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone"
+        >
+
+        <AutoCompleteTextView
+            android:id="@+id/filtr_box_city_auto_complete"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/acc_create_city"
+            />
+        <GridLayout
+            android:columnCount="2"
+            android:rowCount="1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <Button
+                android:id="@+id/b_apply_filtr_box_city"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="filtr_apply_city"
+                android:text="@string/apply_filtr"
+                />
+            <Button
+                android:id="@+id/b_cancel_filtr_box_city"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="filtr_cancel_city"
+                android:text="@string/cancel_filtr"
+                />
+        </GridLayout>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/message_of_offerts"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/RV_EMPEE"
+        android:scrollbars="vertical"
+        android:layout_gravity="center"
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="8dp"
+        >
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+
+
+</LinearLayout>

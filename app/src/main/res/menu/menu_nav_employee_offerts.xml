@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item android:id="@+id/menu_nav_employee_city"
+            android:icon="@android:drawable/ic_menu_gallery"
+            android:title="@string/menu_nav_employee_city"
+            android:checked="true"
+            />
+        <item android:id="@+id/menu_nav_employee_date"
+            android:icon="@android:drawable/ic_menu_gallery"
+            android:title="@string/menu_nav_employee_date"
+            android:checked="true" />
+        <item android:id="@+id/menu_nav_employee_category"
+            android:icon="@android:drawable/ic_menu_gallery"
+            android:title="@string/menu_nav_employee_category"
+            android:checked="true" />
+        <item android:id="@+id/menu_nav_employee_clear_engine"
+            android:icon="@android:drawable/ic_menu_gallery"
+            android:title="@string/menu_nav_employee_clear_engine"
+            android:checked="true" />
+        <item android:id="@+id/menu_nav_employee_salary_min_per_hour"
+            android:icon="@android:drawable/ic_menu_gallery"
+            android:title="@string/menu_nav_employee_salary_min_per_hour"
+            android:checked="true" />
+        <item android:id="@+id/menu_nav_employee_salary_max_per_hour"
+            android:icon="@android:drawable/ic_menu_gallery"
+            android:title="@string/menu_nav_employee_salary_max_per_hour"
+            android:checked="true" />
+        <item android:id="@+id/menu_nav_employee_salary_min"
+            android:icon="@android:drawable/ic_menu_gallery"
+            android:title="@string/menu_nav_employee_salary_min"
+            android:checked="true" />
+
+        <item android:id="@+id/menu_nav_employee_salary_max"
+            android:icon="@android:drawable/ic_menu_gallery"
+            android:title="@string/menu_nav_employee_salary_max"
+            android:checked="true" />
+    </group>
+
+
+
+
+
+
+
+</menu>
